@@ -1,0 +1,336 @@
+[
+  {
+    "Company ": "Microsoft Asia Island Limited (MAIL) ",
+    "Owner": "Microsoft Singapore Holdings (MSSH) / Microsoft Singapore Holdings PTE LTD",
+    "Legal HQ": "Bermuda ",
+    "Source ": "Ex.16.1, Senate Case Study ",
+    "Timeline": "Founded in 2003",
+    "Notes ": "Licenses rights to sell software to Microsoft Operations PTE LTD (MOPL). Is global cost share partner (pays 10% of the costs of Microsoft's R&D pool) - Senate study",
+    "Verbatim": "\"Has no employees and conducts no research and development activities\" -- Senate Case Study "
+  },
+  {
+    "Company ": "Microsoft Singapore Holdings PTE LTD (MSSH) ",
+    "Source ": "Ex.16.1",
+    "Timeline": "founded December 2003",
+    "Notes ": "E&Y did the valuation study for the transfer pricing. ",
+    "Link ": "https://www.sgpbusiness.com/company/Microsoft-Singapore-Holdings-Pte-Ltd"
+  },
+  {
+    "Company ": "Microsoft Operations Puerto Rico LLC (MOPR), post July 2006 RIO was \"indirect sole owner\"",
+    "Owner": "MACSH Bermuda Limited ",
+    "Source ": "Ex.16.1, Senate Case Study ",
+    "Timeline": "DVD manufacturing facility completed October 2006. Established an EMD data center in December 2007 to facilitate digital download of software. Pre-release validation and security lab established December 2008, led to scaling back PRSS lab in Redmond to backup facility, and shuttering other labs. . ",
+    "Notes ": "KPMG did the valuation study for the transfer pricing. Microsoft uses MOPR to avoid \"over $4 million in U.S. taxes each day\" - Senate Case Study. Portion of sales remitted to PR taxed at a pre-negotiated rate of ~2%. ",
+    "Verbatim": "Founded in 2005, Microsoft says, to build DVD capability for the company.  \"This structure is not designed to satisfy any specific manufacturing or business need; rather, it is designed to minimize tax on sales of products sold in the United States.\" - Senate Case Study",
+    "People": "Rodolfo Acevedo, vice president, 2005 Americas agreement. ",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "GraceMac Corporation ",
+    "Owner": "Microsoft Corp. ",
+    "Domiciled ": "Nevada",
+    "Source ": "Ex.16.2, Indian Case",
+    "Timeline": "Incorporated in Nevada, 1994. 1/1/1999 license agreement with Microsoft Corp to further license products for sale to subsidiaries. Merged into MOL Corp, 2006.",
+    "Notes ": "The licenser of IP to Microsoft Operations PTE LTD in 1999, and R&D cost sharing and technology license agreements of April 3 2004 with MAIL. ",
+    "People": "Monte Miller, \"General Manager\", per Ex16.2; Nevada registration statement: officers Gregory B Maffei, Bruce J Reid, Michael P Boyle ",
+    "Link ": "Nevada secretary of state listing"
+  },
+  {
+    "Company ": "Microsoft Operations PTE Ltd (MO)",
+    "Owner": "Microsoft Asia Island Limited (MAIL)",
+    "Source ": "Ex.16.2, Indian Case",
+    "Timeline": "Registered in Singapore, 1998. ",
+    "Notes ": "Per Indian case, licensed retail IP from Gracemac, and turned around and licensed to Microsoft Regional Sales corp for sale. ",
+    "Link ": "SGP listing. ",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "Microsoft Regional Sales Corp. (MRSC) ",
+    "Owner": "Microsoft Corp. ",
+    "Domiciled ": "Nevada",
+    "Source ": "Ex.16.2, Indian Case",
+    "Timeline": "Registered in Nevada, 1998. Registered (as foreign company) in Singapore, 1998. ",
+    "Verbatim": "Ex16.2, 8: \"In most local markets, products are manufactured and sold by Microsoft Singapore to the Singapore branch of the Microsoft Regional Sales Corporation. MRS is a limited risk reseller that resells the products to the end customer, with sales and marketing support provided by Microsoft Singapore and the sales subsidiaries.\" ",
+    "Link ": "Nevada secretary of state listing",
+    "undefined": "SGP business listing."
+  },
+  {
+    "Company ": "Microsoft Asia Limited (MAL) ",
+    "Owner": "Microsoft U.S.* noted as consolidated return joiners of Microsoft, including GraceMac. ",
+    "Domiciled ": "Japan ",
+    "Source ": "Ex.16.2",
+    "Verbatim": "Ex16.2, 8: \"For Japan, Microsoft Singapore sells products to MRS, which are resold by MRS to Microsoft Asia Limited, a Japanese branch of Microsoft U.S.\" "
+  },
+  {
+    "Company ": "Microsoft EMEA Cost Share LLC (MECSLLC)",
+    "Owner": "Microsoft Licensing GP ",
+    "Domiciled ": "Nevada",
+    "Source ": "Ex.16.2",
+    "Timeline": "2002, registered in Nevada. 2005 Americas agreement ",
+    "Notes ": "Was the entity receiving payments from MOPR on 2005 Americas transfer.",
+    "People": "Joel Freedman, VP, signer of 2005 Americas agreement."
+  },
+  {
+    "Company ": "Microsoft Puerto Rico Inc. (MSPR) ",
+    "Domiciled ": "Delaware ",
+    "Source ": "Ex.16.3",
+    "Timeline": "2005 agreement shifted Americax retail sales to MOPR, but during the temporary construction period, MSPR was retained by MOPR to produce the media until June 30 2006. ",
+    "Notes ": "Former licensee for Americas retail sales channel, until 2005 agreement. Established in Humacao with a leased 56,000 sq ft facility for software media. "
+  },
+  {
+    "Company ": "MOL Corporation (MOLC)",
+    "Owner": "Microsoft Licensing GP ",
+    "Domiciled ": "Nevada",
+    "Source ": "Ex.16.3, Gracemac 'merge out' document. ",
+    "Notes ": "Was the licenser to MOPR of technology IP in 2005, and, as amended, in 2006. 86 employees as of the 2005 effective date. Received buy-in-triggering-event payments from MOPR. ",
+    "People": "Todd Dunlap, President, in 2005 Americas cost share. Officers: include Dolliver, Ordorff ",
+    "Link ": "http://nvsos.gov/sosentitysearch/CorpDetails.aspx?lx8nvq=HFo%252f4P7mGnOXrrEdLeUZLg%253d%253d&nt7=0",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "Microsoft Licensing GP (MLGP) or (MSLI) ",
+    "Domiciled ": "Nevada",
+    "Legal HQ": "Nevada",
+    "Source ": "Ex.16.3, Senate Case Study ",
+    "Timeline": "Registered in Nevada, 1997. ",
+    "Notes ": "On 2005 Americas transfer, is distributor for MOPR of MOPR products. "
+  },
+  {
+    "Company ": "Microsoft Corp. (MSFT) ",
+    "Legal HQ": "Redmond, Wash. ",
+    "Notes ": "Retains title to intellectual property rights. \"Legal ownership of intellectual property developed as a result of our research and development activities generally resides with Microsoft Corporation in the U.S.\" - Australia Hearing William Sample "
+  },
+  {
+    "Company ": "MACS Holdings Limited  (MACS) ",
+    "Owner": "Microsoft (until June 2006), RIO (post June 2006)",
+    "Domiciled ": "Bermuda ",
+    "Source ": "Ex.16.3, Senate Exhibits",
+    "Notes ": "2006 transfer agreement / amendment. "
+  },
+  {
+    "Company ": "Microsoft General Management Company (MGMC)",
+    "Domiciled ": "Nevada ",
+    "Source ": "Ex.16.3",
+    "Notes ": "2006 transfer agreement / amendment. "
+  },
+  {
+    "Company ": "Microsoft Round Island One ",
+    "Owner": "RI Holdings (MBH Ltd has one share)",
+    "Domiciled ": "Ireland ",
+    "Legal HQ": "Ireland (?) ",
+    "Source ": "Ex.16.3, Annual Return - 2015",
+    "Timeline": "Registered Ireland, 2001; 2006, June 21, deal with MOLC where MACS shares transferred to RIO in exchange for MOLC shares. ",
+    "Notes ": "Provided equity financing to MOPR to fund start up operations, $1.6 billion. ",
+    "Verbatim": "\"the parties agreet to exchange all of the MACS class A and Class B common shares to RIO in exchange for MOLC common shares as part of a tax free merger under Section 368(a)(1)(B) of the Internal Revenue Code. ",
+    "People": "Officers: Dolliver, Orndorff "
+  },
+  {
+    "Company ": "RI Holdings",
+    "Legal HQ": "Bermuda",
+    "Source ": "Round Island One - Annual Return"
+  },
+  {
+    "Company ": "MBH Ltd",
+    "Legal HQ": "Bermuda",
+    "Source ": "Round Island One - Annual Return"
+  },
+  {
+    "Company ": "Microsoft Ireland Research (MIR) ",
+    "Owner": "Round Island One ",
+    "Domiciled ": "Ireland ",
+    "Source ": "Senate Case Study ",
+    "Timeline": "1999, acquired economic rights to IP for certain products in EMEA",
+    "Notes ": "Licenses IP rights to MIOL. Shares in 30% of costs of Microsoft R&D (per Senate report)",
+    "Verbatim": "\"MIR does not actually manufacture or sell any products\" -- Senate Case Study ",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "Microsoft Ireland Operations Ltd (MIOL) ",
+    "Owner": "Microsoft Ireland Research ",
+    "Domiciled ": "Ireland ",
+    "Source ": "Senate Case Study ",
+    "Notes ": "Similar function as MOPR: manufactures, sells products to foreign distributors. ",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "Flat Island Company ",
+    "Source ": "Senate Case Study ",
+    "Timeline": "Registered Ireland, 9-2002. ",
+    "Notes ": "Licensed rights to IP for certain products in EMEA, effective 1-2003. ",
+    "Link ": "Ireland company listing"
+  },
+  {
+    "Company ": "Microsoft Global Finance ",
+    "Owner": "Round Island One, MFM Holdings (1 share)",
+    "Legal HQ": "Ireland",
+    "Source ": "Microsoft Global Finance - Annual Return 2015",
+    "Notes ": "Irish company No. 348351",
+    "People": "Officers: Dolliver, Orndorff ",
+    "Link ": "https://www.sec.gov/Archives/edgar/data/789019/000119312515272806/d918813dex21.htm",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "Microsoft Ireland Capital",
+    "Domiciled ": "Ireland",
+    "Source ": "Microsoft Global Finance - Annual Return 2015, Crider 11-5 email. ",
+    "Notes ": "In FY06, was parent company of Microsoft Ireland Operations Ltd. "
+  },
+  {
+    "Company ": "Microsoft Round Island Three Ltd. ",
+    "Owner": "Microsoft Global Finance",
+    "Domiciled ": "Ireland",
+    "Source ": "Microsoft Global Finance - Annual Return 2015, Annual Return 2015 ",
+    "Timeline": "Commenced trading in 2014. ",
+    "Notes ": "Holds an 80.56% investment share of Invention Investment Fund III (IIF3)"
+  },
+  {
+    "Company ": "Microsoft Australia Pty ",
+    "Owner": "Microsoft Luxembourg International Mobile SARL (and one share MSHC) ",
+    "Domiciled ": "Australia",
+    "Legal HQ": "Australia",
+    "Source ": "Australia Hearing / Current Company Extract ",
+    "Timeline": "incorporated in Australia, 1983",
+    "Notes ": "960 employees. ",
+    "People": "Officers: Orndorff, Dolliver"
+  },
+  {
+    "Company ": "MSHC LLC ",
+    "Domiciled ": "Redmond, Wash. ",
+    "Legal HQ": "Nevada ",
+    "Source ": "Australia Company Extract ",
+    "Timeline": "Incorporated Nevada, 1998.",
+    "Notes ": "Owns one share of Microsoft Australia PTY ",
+    "People": "Officers: Microsoft Corp., Dolliver, Orndorff ",
+    "Link ": "Nevada secretary of state listing"
+  },
+  {
+    "Company ": "Microsoft Luxembourg International Mobile SARL ",
+    "Owner": "Microsoft Corp. (? -- interpretation of Sample quote, P. 56, Australia Hearing, and Microsoft Mobile International capital amendment, in links))",
+    "Domiciled ": "Luxembourg ",
+    "Legal HQ": "Luxembourg",
+    "Source ": "Australia Company Extract / UK annual return.",
+    "Timeline": "Registered in Luxembourg, 9-19-13",
+    "Notes ": "Appears to be corporate parent of local support / marketing subsidiaries -- at least Australia, UK. ",
+    "People": "Officers: include Orndorff, Dolliver",
+    "Link ": "http://www.etat.lu/memorial/2015/C/Html/0365/2015005571.html"
+  },
+  {
+    "Company ": "MFM Holdings ",
+    "Legal HQ": "Bermuda ",
+    "Source ": "Microsoft Global Finance - Annual Return 2015",
+    "Notes ": "Owns one share of Microsoft global finance. "
+  },
+  {
+    "Company ": "Microsoft New Zealand Ltd ",
+    "Owner": "Microsoft Luxembourg International Mobile SARL ",
+    "Domiciled ": "New Zealand",
+    "Legal HQ": "New Zealand",
+    "Source ": "NZ companies listing",
+    "People": "Officers: (include) Orndorff, Dolliver",
+    "Link ": "https://www.business.govt.nz/companies/app/ui/pages/companies/510446/shareholdings?backurl=%2Fcompanies%2Fapp%2Fui%2Fpages%2Fcompanies%2Fsearch%3Fmode%3Dstandard%26type%3Dentities%26q%3Dmicrosoft"
+  },
+  {
+    "Company ": "Microsoft (UK) Ltd ",
+    "Owner": "Microsoft Luxembourg International Mobile SARL ",
+    "Domiciled ": "UK ",
+    "Source ": "UK annual return "
+  },
+  {
+    "Company ": "Microsoft Capital Group LLC ",
+    "Legal HQ": "United States ",
+    "Source ": "SEC subsidiaries listing. ",
+    "Is on \"significant\" subsidiaries SEC filing, 2015. ": "Yes"
+  },
+  {
+    "Company ": "MELLC",
+    "Source ": "WSJ Ireland article ",
+    "Verbatim": "Per WSJ: \"Flat Island, according to its filings, has cost-sharing agreements with a Microsoft unit in the U.S. called MELLC, which is the ultimate party controlling offshore patent licensing rights. Microsoft filings give no additional information about MELLC, nor will the company disclose details.\"",
+    "Link ": "http://www.wsj.com/articles/SB113132761685289706"
+  },
+  {
+    "Company ": "\"Singapore ROC\" ",
+    "Source ": "Ex.16.2, Australia Hearing - William Sample",
+    "Timeline": "Established 1998 "
+  },
+  {
+    "Company ": "\"Ireland ROC\" ",
+    "Source ": "Australian Hearing - William Sample",
+    "Timeline": "Established 1986"
+  },
+  {
+    "Company ": "Sales flow: "
+  },
+  {
+    "Company ": "Windows ",
+    "Owner": "U.S. ",
+    "Domiciled ": "[sales subsidiary] ",
+    "Legal HQ": "Microsoft Licensing GP ",
+    "Notes ": "Microsoft Corp. "
+  },
+  {
+    "Company ": "Windows ",
+    "Owner": "ex-U.S.",
+    "Domiciled ": "Microsoft Regional Sales Corp. ",
+    "Legal HQ": "Microsoft Licensing GP ",
+    "Notes ": "Microsoft Corp. "
+  },
+  {
+    "Company ": "Office (and all other products) ",
+    "Owner": "Japan",
+    "Domiciled ": "Microsoft Asia Ltd (Japan) ",
+    "Legal HQ": "Microsoft Regional Sales Corp. ",
+    "Source ": "Microsoft Operations PTE ",
+    "Timeline": "Microsoft Asia Island Ltd (Bermuda)",
+    "Notes ": "Microsoft Singapore Holdings Pte Ltd"
+  },
+  {
+    "Company ": "Consulting / support services ",
+    "Owner": "Int'l markets",
+    "Domiciled ": "[local subsidiary] ",
+    "Legal HQ": "Microsoft Luxembourg International Mobile SARL ",
+    "Notes ": "Microsoft Corp. "
+  },
+  {
+    "Company ": "Sales examples. ",
+    "Owner": "Customer located in ",
+    "Domiciled ": "Buys from ",
+    "Legal HQ": "$ passes to",
+    "Source ": "and on ",
+    "Timeline": "and on ",
+    "Notes ": "$ ultimately resides with",
+    "People": "chatter: "
+  },
+  {
+    "Company ": "Office (and all other products) ",
+    "Owner": "U.S. ",
+    "Domiciled ": "Microsoft Licensing GP ",
+    "Legal HQ": "Microsoft Operations Puerto Rico LLC (Puerto Rico)",
+    "Source ": "MACS Holdings (Bermuda)",
+    "Timeline": "Microsoft Round Island One (Ireland)",
+    "Notes ": "RI Holdings (Bermuda)",
+    "People": "\"This structure is not designed to satisfy any specific manufacturing or business need; rather, it is designed to minimize tax on sales of products sold in the United States.\" - 2012 U.S. Senate permanent subcommittee on investigations report. "
+  },
+  {
+    "Company ": "Office (and all other products) ",
+    "Owner": "Europe",
+    "Domiciled ": "[sales subsidiary] ",
+    "Legal HQ": "Microsoft Ireland Operations Ltd (Ireland)",
+    "Source ": "Microsoft Ireland Research (Singapore)",
+    "Timeline": "Microsoft Round Island One (Ireland) ",
+    "Notes ": "RI Holdings (Bermuda)",
+    "People": "Microsoft's Irish sales hub sold $22.2 billion in products to customers across Europe, the Middle East, and Africa. But only "
+  },
+  {
+    "Company ": "Office (and all other products) ",
+    "Owner": "Asia (Australia)",
+    "Domiciled ": "[sales subsidiary] ",
+    "Legal HQ": "Microsoft Regional Sales Corp. (Singapore branch)",
+    "Source ": "Microsoft Operations PTE (Singapore)",
+    "Timeline": "Microsoft Asia Island Ltd (Bermuda)",
+    "Notes ": "Microsoft Singapore Holdings Pte Ltd (Singapore)",
+    "People": "Microsoft estimates that it sold about $2.1 billion in goods and services to Australian customers in its 2014 fiscal year. But only $100 million of that (primiarly customer support and consulting services), was booked by Microsoft's Australian subsidiary. The remaining $2 billion went to the Singapore sales unit, and on to its Bermuda-based parent.  "
+  },
+  {
+    "Company ": "[could also illustrate with the headline tax rate of each country?] "
+  }
+]
