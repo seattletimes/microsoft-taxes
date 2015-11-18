@@ -10,15 +10,39 @@
   <body>
 
     <responsive-child>
-      <div class="aspect-ratio-outer">
-        <div class="aspect-ratio-inner">
-          <leaflet-map lat="25" lng="5" zoom=2>
-            <tile-layer layer="cartoPositron"></tile-layer>
-          </leaflet-map>
+
+      <div class="buttons">
+        <div class="button" data-region="asia">Asia</div>
+        <div class="button" data-region="americas">Americas</div>
+        <div class="button" data-region="ema">Europe, Middle East, Africa</div>
+      </div>
+
+      <div class="container">
+        <div class="map-container aspect-ratio-outer">
+          <div class="aspect-ratio-inner">
+            <leaflet-map lat="25" lng="5" zoom=1>
+              <tile-layer layer="cartoPositron"></tile-layer>
+            </leaflet-map>
+          </div>
         </div>
+
+        <div class="info-container">
+          Hello.
+        </div>
+
       </div>
     </responsive-child>
 
+    <script>
+      <%
+        var data = {};
+        json.MicrosoftTaxDataWorkingCopy_MoneyTrail.forEach(function(row) {
+          if (!data[row.Region]) data[row.Region] = [];
+          data[row.Region].push(row)
+        });
+      %>
+      var taxData = <%= JSON.stringify(data) %>;
+    </script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
