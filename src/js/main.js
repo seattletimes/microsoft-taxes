@@ -12,6 +12,8 @@ var mapElement = document.querySelector("leaflet-map");
 var L = mapElement.leaflet;
 var map = mapElement.map;
 
+var index = 0;
+
 var prevCoords;
 var regions = {};
 
@@ -59,11 +61,12 @@ var setRegion = function(region) {
   for (var r in regions) {
     if (r == region) {
       regions[r].addTo(map);
+      map.fitBounds(regions[r].getBounds());
     } else {
       map.removeLayer(regions[r])
     }
   }
-  document.querySelector(".info-container").innerHTML = template({ hello: "hello" });
+  document.querySelector(".info-container").innerHTML = template(taxData[region][index]);
 };
 
 qsa(".button").forEach(function(button) {

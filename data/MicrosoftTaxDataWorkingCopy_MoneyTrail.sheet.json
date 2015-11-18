@@ -23,6 +23,7 @@
     "Lng": 103.7986046,
     "Address": "438B Alexandra Road, Alexandra Technopark, Singapore",
     "Parent": "Microsoft Corp. ",
+    "Why": "--",
     "Local corporate income tax": "17%",
     "Notes": "When Microsoft sold licenses to resell its software to this Singapore subsidiary in 2004, the deal projected the region's sales would be flat in the years ahead, an IRS audit found. Instead, the East Asian economies the Singapore unit sold to -- which were already booming at the time of the deal -- grew rapidly during the following decade. "
   },
@@ -64,6 +65,7 @@
     "Lat": 1.285215,
     "Lng": 103.84872,
     "Address": "80 Raffles Place, #32-01, UOB Plaza 1, Singapore",
+    "Parent": "--",
     "Local corporate income tax": "17%"
   },
   {
@@ -131,6 +133,7 @@
     "Lat": 32.2944784,
     "Lng": "-64.7900182",
     "Address": "Clarendon House, 2 Church Street, Hamilton, HM 11, Bermuda",
+    "Parent": "--",
     "Why": "Bermuda doesn't levy taxes on corporations. ",
     "Local corporate income tax": "0%",
     "Microsoft's tax rate": "0%"
@@ -139,10 +142,11 @@
     "Order": 1,
     "Region": "ema",
     "Company": "UK Software reseller ",
-    "Location": "UK",
+    "Location": "United Kingdom",
     "Lat": 51.460854,
     "Lng": "-0.9386951",
     "Address": "Thames Valley Park, Reading, Berkshire, UK",
+    "Parent": "--",
     "Why": "Most sales to U.K. customers are treated as Irish income -- and untaxed in the U.K. -- because Microsoft's Irish sales subsidiary has no \"permanent establishment\" in the country. ",
     "Local corporate income tax": "30%",
     "Microsoft's tax rate": 1.3,
@@ -199,8 +203,12 @@
     "Lat": 32.2944784,
     "Lng": "-64.7900182",
     "Address": "Clarendon House, 2 Church Street, Hamilton, HM 11, Bermuda",
+    "Parent": "--",
     "Why": "Bermuda doesn't levy taxes on corporations. ",
     "Local corporate income tax": "0%",
     "Microsoft's tax rate": "0%"
+  },
+  {
+    "Parent": "--"
   }
 ]
