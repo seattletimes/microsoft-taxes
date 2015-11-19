@@ -70,6 +70,57 @@ body {
   .loophole {
     padding-top: 10px;
   }
+  .previous, .next {
+    width: 50%;
+    display: inline-block;
+    font-size: 12px;
+    color: @df-dark-gray;
+    cursor: pointer;
+    transition: color .1s linear;
+
+    .fa {
+      font-size: 20px;
+    }
+    .label {
+      vertical-align: top;
+      line-height: 22px;
+    }
+    .inner {
+      display: inline-block;
+    }
+
+    &:hover {
+      color: @df-middle-gray;
+    }
+  }
+  .previous {
+    .label {
+      padding-left: 3px;
+    }
+  }
+  .next {
+    text-align: right;
+
+    .label {
+      padding-right: 3px;
+    }
+  }
+
+  .bars {
+    padding: 20px 0;
+  }
+
+  .bar {
+    height: 20px;
+
+    &.microsoft {
+      background: @df-middle-gray;
+      margin-bottom: 5px;
+    }
+    &.local {
+      background: @df-border-gray;
+    }
+  }
 }
 
 .aspect-ratio-outer {

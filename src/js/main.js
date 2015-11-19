@@ -12,12 +12,27 @@ var mapElement = document.querySelector("leaflet-map");
 var L = mapElement.leaflet;
 var map = mapElement.map;
 
+var region;
 var index = 0;
 
 var prevCoords;
 var regions = {};
 
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
+
+var infoBox = document.querySelector(".info-container");
+
+infoBox.addEventListener("click", function(e) {
+  var parent = e.target.parentElement.parentElement;
+
+  if (parent.classList.contains("previous")) {
+    index -= 1;
+  }
+  if (parent.classList.contains("next")) {
+    index += 1;
+  }
+  infoBox.innerHTML = template(taxData[region][index]);
+});
 
 var drawLine = function(location1, location2) {
   var pointA = new L.LatLng(location1[0],location1[1]);
@@ -57,7 +72,7 @@ var drawLine = function(location1, location2) {
   regions[region] = featureGroup;
 });
 
-var setRegion = function(region) {
+var setRegion = function() {
   for (var r in regions) {
     if (r == region) {
       regions[r].addTo(map);
@@ -66,12 +81,14 @@ var setRegion = function(region) {
       map.removeLayer(regions[r])
     }
   }
-  document.querySelector(".info-container").innerHTML = template(taxData[region][index]);
+  infoBox.innerHTML = template(taxData[region][index]);
 };
 
 qsa(".button").forEach(function(button) {
   button.addEventListener("click", function(e) {
-    setRegion(e.target.getAttribute("data-region"));
+    index = 0;
+    region = e.target.getAttribute("data-region")
+    setRegion();
     var selected = qsa(".selected.button");
     if (selected) selected.forEach(function(b) {
       b.classList.remove("selected");

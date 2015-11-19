@@ -1,4 +1,22 @@
 <div class="hed"><%= data.Order %>. <%= data.Location %></div>
+
 <div><strong>Company:</strong> <em><%= data.Company %></em></div>
 <div><strong>Parent:</strong> <em><%= data.Parent %></em></div>
+
 <div class="loophole"><%= data.Why %></div>
+
+<div class="bars">
+  <div class="microsoft bar" style="width: <%= data.Microsoft %>%"></div>
+  <div class="local bar" style="width: <%= data.Local %>%"></div>
+</div>
+
+<div class="previous">
+  <div class="inner">
+    <i class="fa fa-long-arrow-left"></i> <span class="label">PREVIOUS</span>
+  </div>
+</div>
+<div class="next">
+  <div class="inner">
+    <span class="label">NEXT</span> <i class="fa fa-long-arrow-right"></i>
+  </div>
+</div>
