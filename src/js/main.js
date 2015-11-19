@@ -17,10 +17,18 @@ var index = 0;
 
 var prevCoords;
 var regions = {};
+var markers = {};
 
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
 
 var infoBox = document.querySelector(".info-container");
+
+var findMin = function(val1, val2) {
+  return val1 < val2 ? val1 : val2;
+};
+var findMax = function(val1, val2) {
+  return val1 > val2 ? val1 : val2;
+};
 
 infoBox.addEventListener("click", function(e) {
   var parent = e.target.parentElement.parentElement;
@@ -32,6 +40,20 @@ infoBox.addEventListener("click", function(e) {
     index += 1;
   }
   infoBox.innerHTML = template(taxData[region][index]);
+
+  var first = markers[region][index - 1];
+  var second = markers[region][index];
+  var firstCoords = first.getLatLng();
+  var secondCoords = second.getLatLng();
+  var southWest = [ 
+    findMin(firstCoords.lat, secondCoords.lat),
+    findMin(firstCoords.lng, secondCoords.lng)
+  ];
+  var northEast = [ 
+    findMax(firstCoords.lat, secondCoords.lat),
+    findMax(firstCoords.lng, secondCoords.lng)
+  ];
+  map.fitBounds([southWest,northEast], {padding: [10,10]});
 });
 
 var drawLine = function(location1, location2) {
@@ -50,6 +72,8 @@ var drawLine = function(location1, location2) {
 
 ["asia", "americas", "ema"].forEach(function(region) {
   var group = [];
+  if (!markers[region]) markers[region] = [];
+
   prevCoords = null;
   
   taxData[region].forEach(function(location) {
@@ -60,6 +84,7 @@ var drawLine = function(location1, location2) {
       })
     });
     group.push(marker);
+    markers[region].push(marker);
 
     if (prevCoords) {
       var line = drawLine(coords, prevCoords);
@@ -76,7 +101,7 @@ var setRegion = function() {
   for (var r in regions) {
     if (r == region) {
       regions[r].addTo(map);
-      map.fitBounds(regions[r].getBounds());
+      map.fitBounds(regions[r].getBounds(), {padding: [10,10]});
     } else {
       map.removeLayer(regions[r])
     }

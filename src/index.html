@@ -22,13 +22,16 @@
         <div class="map-container aspect-ratio-outer">
           <div class="aspect-ratio-inner">
             <leaflet-map lat="25" lng="5" zoom=1>
+              <map-options>
+                { "maxZoom": 6 }
+              </map-options>
               <tile-layer layer="cartoPositron"></tile-layer>
             </leaflet-map>
           </div>
         </div>
 
         <div class="info-container">
-          Choose a region.
+          <i class="fa fa-hand-o-up"></i> Choose a region.
         </div>
 
       </div>
