@@ -156,6 +156,12 @@ body {
   width: 18px !important;
   height: 18px !important;
 
+  .div-label {
+    color: white;
+    text-align: center;
+    display: none;
+  }
+
   &.americas {
     background: #2384c6; 
   }
@@ -164,5 +170,18 @@ body {
   }
   &.asia {
     background: #2a9964;
+  }
+  &.highlighted {
+    background: #da2128;
+    z-index: 99999 !important;
+    width: 26px !important;
+    height: 26px !important;
+    line-height: 28px;
+    font-size: 18px;
+    font-family: @df-serif;
+
+    .div-label {
+      display: block;
+    }
   }
 }

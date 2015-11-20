@@ -23,13 +23,6 @@ var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
 
 var infoBox = document.querySelector(".info-container");
 
-var findMin = function(val1, val2) {
-  return val1 < val2 ? val1 : val2;
-};
-var findMax = function(val1, val2) {
-  return val1 > val2 ? val1 : val2;
-};
-
 infoBox.addEventListener("click", function(e) {
   var parent = e.target.parentElement.parentElement;
 
@@ -41,6 +34,22 @@ infoBox.addEventListener("click", function(e) {
   }
   infoBox.innerHTML = template(taxData[region][index]);
 
+  zoomMap();
+  
+  markers[region].forEach(function(marker) {
+    marker._icon.classList.remove("highlighted");
+  });
+  markers[region][index]._icon.classList.add("highlighted");
+});
+
+var findMin = function(val1, val2) {
+  return val1 < val2 ? val1 : val2;
+};
+var findMax = function(val1, val2) {
+  return val1 > val2 ? val1 : val2;
+};
+
+var zoomMap = function() {
   var first = markers[region][index - 1];
   var second = markers[region][index];
   var firstCoords = first.getLatLng();
@@ -54,7 +63,7 @@ infoBox.addEventListener("click", function(e) {
     findMax(firstCoords.lng, secondCoords.lng)
   ];
   map.fitBounds([southWest,northEast], {padding: [10,10]});
-});
+};
 
 var drawLine = function(location1, location2) {
   var pointA = new L.LatLng(location1[0],location1[1]);
@@ -80,7 +89,8 @@ var drawLine = function(location1, location2) {
     var coords = [location.Lat, location.Lng];
     var marker = L.marker(coords, {
       icon: L.divIcon({
-        className: region
+        className: region,
+        html: "<div class='div-label'>" + location.Order + "</div>"
       })
     });
     group.push(marker);
@@ -106,6 +116,7 @@ var setRegion = function() {
       map.removeLayer(regions[r])
     }
   }
+  markers[region][index]._icon.classList.add("highlighted");
   infoBox.innerHTML = template(taxData[region][index]);
 };
 
