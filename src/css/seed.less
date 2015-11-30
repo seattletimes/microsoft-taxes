@@ -71,7 +71,7 @@ body {
     padding-top: 10px;
   }
   .previous, .next {
-    width: 50%;
+    width: 49%;
     display: inline-block;
     font-size: 12px;
     color: @df-dark-gray;
@@ -114,12 +114,33 @@ body {
     height: 20px;
 
     &.microsoft {
-      background: @df-dark-gray;
       margin-bottom: 5px;
     }
-    &.local {
-      background: @df-border-gray;
-    }
+  }
+}
+
+.asia {
+  .bar.microsoft {
+    background: #2a9964;
+  }
+  .bar.local {
+    background: lighten(#2a9964, 40%);
+  }
+}
+.ema {
+  .bar.microsoft {
+    background: #524fa2;
+  }
+  .bar.local {
+    background: lighten(#524fa2, 40%);
+  }
+}
+.americas {
+  .bar.microsoft {
+    background: #2384c6;
+  }
+  .bar.local {
+    background: lighten(#2384c6, 40%);
   }
 }
 

@@ -123,7 +123,9 @@ var setRegion = function() {
 qsa(".button").forEach(function(button) {
   button.addEventListener("click", function(e) {
     index = 0;
-    region = e.target.getAttribute("data-region")
+    region = e.target.getAttribute("data-region");
+    document.querySelector(".outer").className = "outer";
+    document.querySelector(".outer").classList.add(region);
     setRegion();
     var selected = qsa(".selected.button");
     if (selected) selected.forEach(function(b) {

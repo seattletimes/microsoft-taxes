@@ -11,29 +11,31 @@
   <body>
 
     <responsive-child>
+      <div class="outer">
 
-      <div class="buttons">
-        <div class="button" data-region="americas">Americas</div>
-        <div class="button" data-region="ema">Europe, Middle East, Africa</div>
-        <div class="button" data-region="asia">Asia</div>
-      </div>
+        <div class="buttons">
+          <div class="button" data-region="americas">Americas</div>
+          <div class="button" data-region="ema">Europe, Middle East, Africa</div>
+          <div class="button" data-region="asia">Asia</div>
+        </div>
 
-      <div class="container">
-        <div class="map-container aspect-ratio-outer">
-          <div class="aspect-ratio-inner">
-            <leaflet-map lat="25" lng="5" zoom=1>
-              <map-options>
-                { "maxZoom": 6 }
-              </map-options>
-              <tile-layer id="tiles" layer="cartoPositron"></tile-layer>
-            </leaflet-map>
+        <div class="container">
+          <div class="map-container aspect-ratio-outer">
+            <div class="aspect-ratio-inner">
+              <leaflet-map lat="25" lng="5" zoom=1>
+                <map-options>
+                  { "maxZoom": 6 }
+                </map-options>
+                <tile-layer id="tiles" layer="cartoPositron"></tile-layer>
+              </leaflet-map>
+            </div>
           </div>
-        </div>
 
-        <div class="info-container">
-          <i class="fa fa-hand-o-up"></i> Choose a region.
-        </div>
+          <div class="info-container">
+            Microsoft's business operations are broken down into three global regions. Select a region above to follow the money. tktk
+          </div>
 
+        </div>
       </div>
     </responsive-child>
 
