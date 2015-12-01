@@ -24,15 +24,21 @@ var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
 var infoBox = document.querySelector(".info-container");
 
 infoBox.addEventListener("click", function(e) {
-  var parent = e.target.parentElement.parentElement;
 
-  if (parent.classList.contains("previous")) {
+  var parent = e.target.parentElement;
+
+  if (parent.classList.contains("previous") && index > 0) {
     index -= 1;
+    infoBox.innerHTML = template(taxData[region][index]);
+    document.querySelector(".disabled.arrow").classList.remove("disabled");
+    if (index == 0) document.querySelector(".previous.arrow").classList.add("disabled");
   }
-  if (parent.classList.contains("next")) {
+  if (parent.classList.contains("next") && index < 4) {
     index += 1;
+    infoBox.innerHTML = template(taxData[region][index]);
+    document.querySelector(".disabled.arrow").classList.remove("disabled");
+    if (index == 4) document.querySelector(".next.arrow").classList.add("disabled");
   }
-  infoBox.innerHTML = template(taxData[region][index]);
 
   zoomMap();
   

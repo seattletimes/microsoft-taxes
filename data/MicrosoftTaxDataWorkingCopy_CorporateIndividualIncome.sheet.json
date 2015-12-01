@@ -360,8 +360,12 @@
     "Corporate profits": 3289.126214
   },
   {
-    "U.S. federal income tax receipts and individual and corporate earnings. ": "Sources: U.S. Office of Management and Budget, Federal Reserve Bank of St Louis. ",
-    "Individual income tax payments": "Note: Values are indexed to 100 for 1970. ",
-    "undefined": "Chatter: Since 1970, growth in U.S. corporate profits has far outpaced growth in their federal income tax payments. During that same period, the more modest gains in individual wages have been matched by increased individual income tax payments. "
+    "U.S. federal income tax receipts and individual and corporate earnings. ": "Sources: U.S. Office of Management and Budget, Federal Reserve Bank of St Louis. "
+  },
+  {
+    "U.S. federal income tax receipts and individual and corporate earnings. ": "Chatter: Since 1970, growth in U.S. corporate profits has far outpaced growth in their federal income tax payments. During that same period, the more modest gains in individual wages have been matched by increased individual income tax payments. "
+  },
+  {
+    "U.S. federal income tax receipts and individual and corporate earnings. ": "Note: Values are indexed to 100 for 1970. "
   }
 ]

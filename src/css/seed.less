@@ -2,6 +2,10 @@
 @import "flexbox";
 
 @aspect-ratio: 7/10;
+@americas: #B23600;
+@ema: #FF8A00;
+@asia: #CC5400;
+@red: #B21E00;
 
 body {
   max-width: 960px;
@@ -11,6 +15,10 @@ body {
 
 .container, .buttons {
   .display-flex();
+
+  @media @tablet {
+    display: block;
+  }
 }
 
 .button {
@@ -19,35 +27,35 @@ body {
   padding: 10px;
   padding-top: 12px;
   text-align: center;
-  color: @df-dark-gray;
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
-  transition: background .1s linear;
+  transition: color .1s linear;
 
   &[data-region="americas"] {
-    background: lighten(#2384c6, 20%);
+    background: @americas;
   }
   &[data-region="ema"] {
-    background: lighten(#524fa2, 20%);
+    background: @ema;
   }
   &[data-region="asia"] {
-    background: lighten(#2a9964, 20%);
+    background: @asia;
   }
 
-  &:hover, &.selected {
-    color: white;
+  &:hover {
+    color: @df-dark-gray;
 
-    &[data-region="americas"] {
-      background: #2384c6;
-    }
-    &[data-region="ema"] {
-      background: #524fa2;
-    }
-    &[data-region="asia"] {
-      background: #2a9964;
-    }
+    // &[data-region="americas"] {
+    //   background: lighten(@americas, 20%);
+    // }
+    // &[data-region="ema"] {
+    //   background: lighten(@ema, 20%);
+    // }
+    // &[data-region="asia"] {
+    //   background: lighten(@asia, 20%);
+    // }
   }
 }
 
@@ -62,48 +70,51 @@ body {
   font-size: 15px;
 
   .hed {
+    .display-flex();
+    padding-bottom: 10px;
+  }
+
+  .arrow {
+    font-size: 28px;
+    .flex(0 0 30px);
+
+    .fa {
+      cursor: pointer;
+      transition: color .1s linear;
+
+      &:hover {
+        color: @df-middle-gray;
+      }
+    }
+
+    &.disabled .fa {
+      display: none;
+    }
+  }
+  .next.arrow {
+    text-align: right;
+  }
+
+  .title {
+    .flex(1);
     font-family: @df-serif;
     font-weight: bold;
     font-size: 24px;
     padding-bottom: 5px;
+    text-align: center;
+  }
+  .number {
+    background: @red;
+    display: inline-block;
+    color: white;
+    font-family: @df-sans;
+    border-radius: 50%;
+    padding: 1px 11px 0 11px;
+    margin-right: 4px;
   }
   .loophole {
+    font-family: @df-serif;
     padding-top: 10px;
-  }
-  .previous, .next {
-    width: 49%;
-    display: inline-block;
-    font-size: 12px;
-    color: @df-dark-gray;
-    cursor: pointer;
-    transition: color .1s linear;
-
-    .fa {
-      font-size: 20px;
-    }
-    .label {
-      vertical-align: top;
-      line-height: 22px;
-    }
-    .inner {
-      display: inline-block;
-    }
-
-    &:hover {
-      color: @df-middle-gray;
-    }
-  }
-  .previous {
-    .label {
-      padding-left: 3px;
-    }
-  }
-  .next {
-    text-align: right;
-
-    .label {
-      padding-right: 3px;
-    }
   }
 
   .bars {
@@ -121,26 +132,26 @@ body {
 
 .asia {
   .bar.microsoft {
-    background: #2a9964;
+    background: @asia;
   }
   .bar.local {
-    background: lighten(#2a9964, 40%);
+    background: lighten(@asia, 40%);
   }
 }
 .ema {
   .bar.microsoft {
-    background: #524fa2;
+    background: @ema;
   }
   .bar.local {
-    background: lighten(#524fa2, 40%);
+    background: lighten(@ema, 40%);
   }
 }
 .americas {
   .bar.microsoft {
-    background: #2384c6;
+    background: @americas;
   }
   .bar.local {
-    background: lighten(#2384c6, 40%);
+    background: lighten(@americas, 40%);
   }
 }
 
@@ -173,6 +184,7 @@ body {
 
 .leaflet-marker-icon {
   border-radius: 50%;
+  font-weight: bold;
   border: none !important;
   width: 18px !important;
   height: 18px !important;
@@ -184,22 +196,22 @@ body {
   }
 
   &.americas {
-    background: #2384c6; 
+    background: @americas; 
   }
   &.ema {
-    background: #524fa2; 
+    background: @ema; 
   }
   &.asia {
-    background: #2a9964;
+    background: @asia;
   }
   &.highlighted {
-    background: #da2128;
+    background: @red;
+    margin-left: -13px !important;
+    margin-top: -13px !important;
     z-index: 99999 !important;
     width: 26px !important;
     height: 26px !important;
-    line-height: 28px;
-    font-size: 18px;
-    font-family: @df-serif;
+    font-size: 16px;
 
     .div-label {
       display: block;

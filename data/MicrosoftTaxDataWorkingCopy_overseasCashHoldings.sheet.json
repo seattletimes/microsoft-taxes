@@ -50,8 +50,9 @@
     "How much tax Microsoft would owe if the company brought that income to the U.S.": "$0.2"
   },
   {
-    "Microsoft's overseas holdings": "Source: Microsoft filings",
-    "How much tax Microsoft would owe if the company brought that income to the U.S.": "Chatter: Microsoft's foreign subsidiaries have amassed $108.3 in income that the company deems \"permanently reinvesteed\" outside the country, and therefore not subject to U.S. income tax. The estimated tax bill should that sum be brought to the U.S. -- $34.5 billion -- indicates that Microsoft paid governments outside the U.S. a tax rate of 4.5%.  ",
-    "undefined": "Microsoft's foreign subsidiaries have amassed $108.3 in income that the company deems \"permanently reinvesteed\" outside the country, and therefore not subject to U.S. income tax. The estimated tax bill should that sum be brought to the U.S. -- $34.5 billion -- indicates that Microsoft's foreign operations are paying an effective tax rate of 4.5 percent. "
+    "Microsoft's overseas holdings": "Chatter: Microsoft's foreign subsidiaries have amassed $108.3 in income that the company deems \"permanently reinvesteed\" outside the country, and therefore not subject to U.S. income tax. The estimated tax bill should that sum be brought to the U.S. -- $34.5 billion -- indicates that Microsoft paid governments outside the U.S. a tax rate of 4.5%.  "
+  },
+  {
+    "Microsoft's overseas holdings": "Source: Microsoft filings"
   }
 ]
