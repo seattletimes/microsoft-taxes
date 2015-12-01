@@ -72,9 +72,31 @@ var zoomMap = function() {
 };
 
 var drawLine = function(location1, location2) {
-  var pointA = new L.LatLng(location1[0],location1[1]);
-  var pointB = new L.LatLng(location2[0],location2[1]);
-  var pointList = [pointA, pointB];
+  // var pointA = new L.LatLng(location1[0],location1[1]);
+  // var pointB = new L.LatLng(location2[0],location2[1]);
+
+  var segments = 30;
+
+  var pointList = [];
+
+  var x1 = location1[1] * 1;
+  var y1 = location1[0] * 1;
+  var x2 = location2[1] * 1;
+  var y2 = location2[0] * 1;
+
+
+  var dx = (x1 - x2) / segments;
+  var dy = (y1 - y2) / segments;
+  // var length = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+
+  console.log(dx, dy)
+  for (var i = 0; i < segments + 1; i++) { 
+    var lat = y1 - (dy * i) + Math.sin(Math.PI / segments * i) * 5;
+    var lng = x1 - (dx * i) + Math.sin(Math.PI / segments * i) * 5;
+    pointList.push(new L.LatLng(lat, lng));
+  }
+
+console.log(pointList)
 
   var polyline = new L.Polyline(pointList, {
     color: "#888",
