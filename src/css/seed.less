@@ -24,6 +24,7 @@ body {
 .button {
   .flex(1);
   margin: 10px;
+  margin-left: 0;
   padding: 10px;
   padding-top: 12px;
   text-align: center;
@@ -34,6 +35,14 @@ body {
   cursor: pointer;
   transition: background .1s linear;
   background: @df-light-gray;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media @tablet {
+    margin: 10px 0;
+  }
 
   &.selected {
     color: white;
@@ -53,13 +62,13 @@ body {
     color: white;
     
     &[data-region="americas"] {
-      background: lighten(@americas, 10%);
+      background: lighten(@americas, 12%);
     }
     &[data-region="ema"] {
       background: lighten(@ema, 5%);
     }
     &[data-region="asia"] {
-      background: lighten(@asia, 8%);
+      background: lighten(@asia, 12%);
     }
   }
 }
@@ -73,6 +82,11 @@ body {
   padding: 10px;
   padding-left: 20px;
   font-size: 15px;
+
+  @media @tablet {
+    padding: 0;
+    padding-top: 15px;
+  }
 
   .hed {
     .display-flex();

@@ -17,7 +17,7 @@ var americas = L.geoJson(americaLayer, {
   style: {
     fillColor: "#EC5519",
     weight: 0,
-    fillOpacity: 0.4
+    fillOpacity: 0.35
   }
 }).addTo(map);
 var emaLayer = require("./ema.geo.json");
@@ -25,7 +25,7 @@ var ema = L.geoJson(emaLayer, {
   style: {
     fillColor: "#717400",
     weight: 0,
-    fillOpacity: 0.4
+    fillOpacity: 0.35
   }
 }).addTo(map);
 var asiaLayer = require("./asia.geo.json");
@@ -33,7 +33,7 @@ var asia = L.geoJson(asiaLayer, {
   style: {
     fillColor: "#DC8505",
     weight: 0,
-    fillOpacity: 0.4
+    fillOpacity: 0.35
   }
 }).addTo(map);
 
