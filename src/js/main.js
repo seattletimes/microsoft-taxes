@@ -13,7 +13,7 @@ var L = mapElement.leaflet;
 var map = mapElement.map;
 
 var americaLayer = require("./americas.geo.json");
-L.geoJson(americaLayer, {
+var americas = L.geoJson(americaLayer, {
   style: {
     fillColor: "#EC5519",
     weight: 0,
@@ -21,7 +21,7 @@ L.geoJson(americaLayer, {
   }
 }).addTo(map);
 var emaLayer = require("./ema.geo.json");
-L.geoJson(emaLayer, {
+var ema = L.geoJson(emaLayer, {
   style: {
     fillColor: "#717400",
     weight: 0,
@@ -29,13 +29,19 @@ L.geoJson(emaLayer, {
   }
 }).addTo(map);
 var asiaLayer = require("./asia.geo.json");
-L.geoJson(asiaLayer, {
+var asia = L.geoJson(asiaLayer, {
   style: {
     fillColor: "#DC8505",
     weight: 0,
     fillOpacity: 0.4
   }
 }).addTo(map);
+
+var layers = {
+  "americas": americas,
+  "ema": ema,
+  "asia": asia
+};
 
 var region;
 var index = 0;
@@ -124,8 +130,6 @@ var drawLine = function(location1, location2) {
     pointList.push(new L.LatLng(lat, lng));
   }
 
-console.log(pointList)
-
   var polyline = new L.Polyline(pointList, {
     color: "#888",
     weight: 3,
@@ -188,6 +192,15 @@ qsa(".button").forEach(function(button) {
       b.classList.remove("selected");
     });
     e.target.classList.add("selected");
+
+    ["asia", "americas", "ema"].forEach(function(r) {
+      var layer = layers[r];
+      if (r == region) {
+        layer.addTo(map);
+      } else {
+        map.removeLayer(layer)
+      }
+    });
   })
 })
 
