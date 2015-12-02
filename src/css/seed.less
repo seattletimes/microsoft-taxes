@@ -27,35 +27,40 @@ body {
   padding: 10px;
   padding-top: 12px;
   text-align: center;
-  color: white;
+  color: @df-middle-gray;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
-  transition: color .1s linear;
+  transition: background .1s linear;
+  background: @df-light-gray;
 
-  &[data-region="americas"] {
-    background: @americas;
-  }
-  &[data-region="ema"] {
-    background: @ema;
-  }
-  &[data-region="asia"] {
-    background: @asia;
+  &.selected {
+    color: white;
+
+    &[data-region="americas"] {
+      background: @americas;
+    }
+    &[data-region="ema"] {
+      background: @ema;
+    }
+    &[data-region="asia"] {
+      background: @asia;
+    }
   }
 
   &:hover {
-    color: @df-dark-gray;
-
-    // &[data-region="americas"] {
-    //   background: lighten(@americas, 20%);
-    // }
-    // &[data-region="ema"] {
-    //   background: lighten(@ema, 20%);
-    // }
-    // &[data-region="asia"] {
-    //   background: lighten(@asia, 20%);
-    // }
+    color: white;
+    
+    &[data-region="americas"] {
+      background: lighten(@americas, 10%);
+    }
+    &[data-region="ema"] {
+      background: lighten(@ema, 5%);
+    }
+    &[data-region="asia"] {
+      background: lighten(@asia, 8%);
+    }
   }
 }
 
@@ -127,6 +132,9 @@ body {
     &.microsoft {
       margin-bottom: 5px;
     }
+    &.local {
+      background: @df-light-gray;
+    }
   }
 }
 
@@ -134,24 +142,15 @@ body {
   .bar.microsoft {
     background: @asia;
   }
-  .bar.local {
-    background: lighten(@asia, 40%);
-  }
 }
 .ema {
   .bar.microsoft {
     background: @ema;
   }
-  .bar.local {
-    background: lighten(@ema, 40%);
-  }
 }
 .americas {
   .bar.microsoft {
     background: @americas;
-  }
-  .bar.local {
-    background: lighten(@americas, 40%);
   }
 }
 
