@@ -12,6 +12,31 @@ var mapElement = document.querySelector("leaflet-map");
 var L = mapElement.leaflet;
 var map = mapElement.map;
 
+var americaLayer = require("./americas.geo.json");
+L.geoJson(americaLayer, {
+  style: {
+    fillColor: "#EC5519",
+    weight: 0,
+    fillOpacity: 0.4
+  }
+}).addTo(map);
+var emaLayer = require("./ema.geo.json");
+L.geoJson(emaLayer, {
+  style: {
+    fillColor: "#717400",
+    weight: 0,
+    fillOpacity: 0.4
+  }
+}).addTo(map);
+var asiaLayer = require("./asia.geo.json");
+L.geoJson(asiaLayer, {
+  style: {
+    fillColor: "#DC8505",
+    weight: 0,
+    fillOpacity: 0.4
+  }
+}).addTo(map);
+
 var region;
 var index = 0;
 
