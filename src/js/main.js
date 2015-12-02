@@ -45,6 +45,7 @@ var layers = {
 
 var region;
 var index = 0;
+var prevIndex = -1;
 
 var prevCoords;
 var regions = {};
@@ -59,12 +60,14 @@ infoBox.addEventListener("click", function(e) {
   var parent = e.target.parentElement;
 
   if (parent.classList.contains("previous") && index > 0) {
+    prevIndex = index;
     index -= 1;
     infoBox.innerHTML = template(taxData[region][index]);
     document.querySelector(".disabled.arrow").classList.remove("disabled");
     if (index == 0) document.querySelector(".previous.arrow").classList.add("disabled");
   }
   if (parent.classList.contains("next") && index < 4) {
+    prevIndex = index;
     index += 1;
     infoBox.innerHTML = template(taxData[region][index]);
     document.querySelector(".disabled.arrow").classList.remove("disabled");
@@ -87,8 +90,14 @@ var findMax = function(val1, val2) {
 };
 
 var zoomMap = function() {
-  var first = markers[region][index - 1];
-  var second = markers[region][index];
+  if (index > prevIndex) {
+    var first = markers[region][index - 1];
+    var second = markers[region][index];
+  } else {
+    var first = markers[region][index];
+    var second = markers[region][index + 1];
+  }
+
   var firstCoords = first.getLatLng();
   var secondCoords = second.getLatLng();
   var southWest = [ 
@@ -112,7 +121,6 @@ var drawLine = function(location1, location2) {
   var y1 = location1[0] * 1;
   var x2 = location2[1] * 1;
   var y2 = location2[0] * 1;
-
 
   var dx = (x1 - x2) / segments;
   var dy = (y1 - y2) / segments;
