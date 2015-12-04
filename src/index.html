@@ -13,7 +13,7 @@
     <responsive-child>
       <div class="outer">
 
-        <div class="buttons">
+        <div class="mobile-view buttons">
           <div class="selected button" data-region="americas">Americas</div>
           <div class="selected button" data-region="ema">Europe, Middle East, Africa</div>
           <div class="selected button" data-region="asia">Asia</div>
@@ -22,23 +22,38 @@
         <div class="container">
           <div class="map-container aspect-ratio-outer">
             <div class="aspect-ratio-inner">
-              <leaflet-map lat="25" lng="5" zoom=1>
+              <leaflet-map lat="25" lng="5" zoom=1 fixed>
                 <map-options>
-                  { "maxZoom": 6 }
+                  { "maxZoom": 6, "zoomControl": false }
                 </map-options>
-                <tile-layer id="tiles" layer="cartoPositron"></tile-layer>
+                <tile-layer id="tiles" layer="cartoPositron" opacity="0"></tile-layer>
               </leaflet-map>
             </div>
           </div>
 
           <div class="info-container">
-            Microsoft's business operations are broken down into three global regions. Select a region above to follow the money. tktk
+            <div class="paragraph"><strong>Cash doesn't flow directly from buyers' pockets to Microsoft's headquarters in Redmond, Wash.</strong></div>
+ 
+            <div class="paragraph">Instead, the company operates through three regional sales units, centered in Ireland, Singapore and Puerto Rico. These groups control the rights to profit from Microsoft products around the world.</div>
+             
+            <div class="paragraph">By conducting sales from places with small populations and low tax rates, and routing some profit through virtually tax-free jurisdictions like Bermuda, Microsoft has cut billions of dollars from its tax bill over the last decade.</div>
+             
+            <div class="select-paragraph paragraph"><em><span class="select">Select a region below</span> to follow the lengthy path that a Microsoft sale can take.</em></div>
+
+            <div class="mobile-view paragraph"><em><span class="select">Select a region above</span> to follow the lengthy path that a Microsoft sale can take.</em></div>
           </div>
 
         </div>
 
+
+        <div class="buttons">
+          <div class="selected button" data-region="americas">Americas</div>
+          <div class="selected button" data-region="ema">Europe, Middle East, Africa</div>
+          <div class="selected button" data-region="asia">Asia</div>
+        </div>
+
         <div class="credits">
-          <div><em>Sources: tktktk</em></div>
+          <div><em>Sources: Court documents, Microsoft filings</em></div>
           <div>AUDREY CARLSEN / THE SEATTLE TIMES</div>
         </div>
       </div>

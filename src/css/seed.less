@@ -28,6 +28,23 @@ body {
   }
 }
 
+.buttons {
+  @media @tablet {
+    display: none;
+  }
+}
+
+.mobile-view {
+  display: none;
+
+  @media @tablet {
+    .display-flex();
+  }
+  @media @mobile {
+    display: block;
+  }
+}
+
 .button {
   .flex(1);
   margin: 10px;
@@ -43,7 +60,7 @@ body {
   transition: background .1s linear;
   background: @df-light-gray;
 
-  @media @tablet {
+  @media @mobile {
     margin: 10px 0;
   }
 
@@ -93,6 +110,7 @@ body {
 
   .hed {
     .display-flex();
+    .align-items(center);
   }
 
   .arrow {
@@ -209,11 +227,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    cursor: default;
 
     &:not([ready]) {
       display: none;
     }
   }
+}
+
+.leaflet-container {
+  background: white !important;
+}
+
+.leaflet-clickable {
+  cursor: default !important;
 }
 
 .leaflet-marker-icon {
@@ -266,6 +293,20 @@ body {
     .div-label {
       display: block;
     }
+  }
+}
+
+.select-paragraph {
+  @media @tablet {
+    display: none;
+  }
+}
+
+.paragraph {
+  padding-bottom: 10px;
+
+  .select {
+    color: @red;
   }
 }
 

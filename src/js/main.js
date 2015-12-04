@@ -12,6 +12,13 @@ var mapElement = document.querySelector("leaflet-map");
 var L = mapElement.leaflet;
 var map = mapElement.map;
 
+L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
+  maxZoom: 6,
+  minZoom: 1
+}).addTo(map);
+
+map.removeLayer(mapElement.lookup.tiles);
+
 var americaLayer = require("./americas.geo.json");
 var americas = L.geoJson(americaLayer, {
   style: {
@@ -66,12 +73,12 @@ infoBox.addEventListener("click", function(e) {
     document.querySelector(".disabled.arrow").classList.remove("disabled");
     if (index == 0) document.querySelector(".previous.arrow").classList.add("disabled");
   }
-  if (parent.classList.contains("next") && index < 4) {
+  if (parent.classList.contains("next") && index < (taxData[region].length - 1)) {
     prevIndex = index;
     index += 1;
     infoBox.innerHTML = template(taxData[region][index]);
     document.querySelector(".disabled.arrow").classList.remove("disabled");
-    if (index == 4) document.querySelector(".next.arrow").classList.add("disabled");
+    if (index == (taxData[region].length - 1)) document.querySelector(".next.arrow").classList.add("disabled");
   }
 
   zoomMap();
