@@ -7,11 +7,15 @@
 <div><strong>Company:</strong> <em><%= data.Company %></em></div>
 <div><strong>Parent:</strong> <em><%= data.Parent %></em></div>
 
-<div class="loophole"><%= data.Why %></div>
+<% if (data["Show-tax"]) { %>
+  <div class="bars">
+    <div>
+      <div class="local bar" style="width: <%= data.Local %>%"></div><div class="bar-label"><strong><%= data.Local %>%</strong> (Local corporate income tax)</div>
+    </div>
+    <div>
+      <div class="microsoft bar" style="width: <%= data.Microsoft %>%"></div><div class="bar-label"><strong><%= data.Microsoft %>%</strong> (Microsoft's tax rate)</div>
+    </div>
+  </div>
+<% }; %>
 
-<div class="bars">
-  Microsoft's tax rate
-  <div class="microsoft bar" style="width: <%= data.Microsoft %>%"></div>
-  Local corporate income tax
-  <div class="local bar" style="width: <%= data.Local %>%"></div>
-</div>
+<div class="loophole"><%= data.Why %></div>

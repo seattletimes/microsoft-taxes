@@ -157,7 +157,7 @@ var drawLine = function(location1, location2) {
     var coords = [location.Lat, location.Lng];
     var marker = L.marker(coords, {
       icon: L.divIcon({
-        className: region,
+        className: region + " index-" + location.Order,
         html: "<div class='div-label'>" + location.Order + "</div>"
       })
     });

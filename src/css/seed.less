@@ -13,6 +13,13 @@ body {
   font-family: @df-sans;
 }
 
+.outer {
+  border-top: 1px solid @df-border-gray;
+  border-bottom: 1px solid @df-border-gray;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
 .container, .buttons {
   .display-flex();
 
@@ -35,10 +42,6 @@ body {
   cursor: pointer;
   transition: background .1s linear;
   background: @df-light-gray;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   @media @tablet {
     margin: 10px 0;
@@ -136,18 +139,26 @@ body {
   }
 
   .bars {
-    padding: 20px 0;
+    padding: 10px 0 4px 0;
+    margin-top: 5px;
+    border-left: 1px solid @df-middle-gray;
   }
 
   .bar {
-    height: 20px;
+    height: 18px;
+    display: inline-block;
 
-    &.microsoft {
-      margin-bottom: 5px;
-    }
     &.local {
-      background: @df-light-gray;
+      background: @df-border-gray;
     }
+  }
+
+  .bar-label {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top;
+    line-height: 20px;
+    padding-left: 3px;
   }
 }
 
@@ -204,7 +215,23 @@ body {
   .div-label {
     color: white;
     text-align: center;
-    display: none;
+    // display: none;
+  }
+
+  &.index-1 {
+    z-index: 99998 !important;
+  }
+  &.index-2 {
+    z-index: 99997 !important;
+  }
+  &.index-3 {
+    z-index: 99996 !important;
+  }
+  &.index-4 {
+    z-index: 99995 !important;
+  }
+  &.index-5 {
+    z-index: 99994 !important;
   }
 
   &.americas {
@@ -229,4 +256,10 @@ body {
       display: block;
     }
   }
+}
+
+.credits {
+  padding-top: 10px;
+  font-size: 11px;
+  color: @df-middle-gray;
 }
