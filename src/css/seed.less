@@ -93,11 +93,10 @@ body {
 
   .hed {
     .display-flex();
-    padding-bottom: 10px;
   }
 
   .arrow {
-    font-size: 28px;
+    font-size: 24px;
     .flex(0 0 30px);
 
     .fa {
@@ -121,62 +120,74 @@ body {
     .flex(1);
     font-family: @df-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     padding-bottom: 5px;
     text-align: center;
   }
   .number {
     background: @red;
-    display: inline-block;
     color: white;
     font-family: @df-sans;
     border-radius: 50%;
-    padding: 1px 11px 0 11px;
-    margin-right: 4px;
+    margin: auto;
+    width: 32px;
+    line-height: 32px;
+    font-size: 22px;
+    margin-bottom: 8px;
   }
+
+  .location {
+    font-family: @df-sans;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 12px;
+    padding-top: 3px;
+    letter-spacing: .25px;
+  }
+
   .loophole {
     padding-top: 10px;
   }
 
-  .bars {
-    padding: 10px 0 4px 0;
-    margin-top: 5px;
-    border-left: 1px solid @df-middle-gray;
-  }
+  // .bars {
+  //   padding: 10px 0 4px 0;
+  //   margin-top: 5px;
+  //   border-left: 1px solid @df-middle-gray;
+  // }
 
-  .bar {
-    height: 18px;
-    display: inline-block;
+  // .bar {
+  //   height: 18px;
+  //   display: inline-block;
 
-    &.local {
-      background: @df-border-gray;
-    }
-  }
+  //   &.local {
+  //     background: @df-border-gray;
+  //   }
+  // }
 
-  .bar-label {
-    display: inline-block;
-    font-size: 12px;
-    vertical-align: top;
-    line-height: 20px;
-    padding-left: 3px;
-  }
+  // .bar-label {
+  //   display: inline-block;
+  //   font-size: 12px;
+  //   vertical-align: top;
+  //   line-height: 20px;
+  //   padding-left: 3px;
+  // }
 }
 
-.asia {
-  .bar.microsoft {
-    background: @asia;
-  }
-}
-.ema {
-  .bar.microsoft {
-    background: @ema;
-  }
-}
-.americas {
-  .bar.microsoft {
-    background: @americas;
-  }
-}
+// .asia {
+//   .bar.microsoft {
+//     background: @asia;
+//   }
+// }
+// .ema {
+//   .bar.microsoft {
+//     background: @ema;
+//   }
+// }
+// .americas {
+//   .bar.microsoft {
+//     background: @americas;
+//   }
+// }
 
 .aspect-ratio-outer {
   margin: auto;
@@ -260,6 +271,6 @@ body {
 
 .credits {
   padding-top: 10px;
-  font-size: 11px;
+  font-size: 11.5px;
   color: @df-middle-gray;
 }

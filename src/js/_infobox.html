@@ -1,21 +1,13 @@
 <div class="hed">
   <div class="previous arrow disabled"><i class="fa fa-chevron-left"></i></div>
-  <div class="title"><div class="number"><%= data.Order %></div> <%= data.Location %></div>
+  <div class="title">
+    <div class="number"><%= data.Order %></div> 
+    <div><%= data.Company %></div>
+    <div class="location"><%= data.Location %></div>
+  </div>
   <div class="next arrow"><i class="fa fa-chevron-right"></i></div>
 </div>
 
-<div><strong>Company:</strong> <em><%= data.Company %></em></div>
-<div><strong>Parent:</strong> <em><%= data.Parent %></em></div>
-
-<% if (data["Show-tax"]) { %>
-  <div class="bars">
-    <div>
-      <div class="local bar" style="width: <%= data.Local %>%"></div><div class="bar-label"><strong><%= data.Local %>%</strong> (Local corporate income tax)</div>
-    </div>
-    <div>
-      <div class="microsoft bar" style="width: <%= data.Microsoft %>%"></div><div class="bar-label"><strong><%= data.Microsoft %>%</strong> (Microsoft's tax rate)</div>
-    </div>
-  </div>
-<% }; %>
+<div><strong>Parent company</strong><br><em><%= data.Parent %></em></div>
 
 <div class="loophole"><%= data.Why %></div>
