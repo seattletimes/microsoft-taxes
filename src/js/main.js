@@ -18,61 +18,11 @@ L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
   minZoom: 1
 }).addTo(map);
 
+//get rid of the default layer
 map.removeLayer(mapElement.lookup.tiles);
 
-var geoURLs = ["americas", "ema", "asia"];
-var requests = geoURLs.map(u => $.ajax({
-  url: `./assets/${u}.geojson`,
-  dataType: "json"
-}));
-
-var americas;
-var ema;
-var asia;
-var layers;
-
-$.when.apply($, requests).then(function(a, e, as) {
-  var americaLayer = a[0];
-  var emaLayer = e[0];
-  var asiaLayer = as[0];
-
-  americas = L.geoJson(americaLayer, {
-    style: {
-      fillColor: "#EC5519",
-      weight: 0,
-      fillOpacity: 0.35
-    }
-  }).addTo(map);
-  ema = L.geoJson(emaLayer, {
-    style: {
-      fillColor: "#717400",
-      weight: 0,
-      fillOpacity: 0.35
-    }
-  }).addTo(map);
-    asia = L.geoJson(asiaLayer, {
-    style: {
-      fillColor: "#DC8505",
-      weight: 0,
-      fillOpacity: 0.35
-    }
-  }).addTo(map);
-
-  layers = {
-    "americas": americas,
-    "ema": ema,
-    "asia": asia
-  };
-})
-
-// var americaLayer = require("./americas.geo.json");
-
-// var emaLayer = require("./ema.geo.json");
-
-// var asiaLayer = require("./asia.geo.json");
-// var 
-
-
+var layers = {};
+var zones = ["americas", "ema", "asia"];
 
 var region;
 var index = 0;
@@ -81,6 +31,44 @@ var prevIndex = -1;
 var prevCoords;
 var regions = {};
 var markers = {};
+var layers = {};
+
+//IE really doesn't handle our geoJSON very well...
+if (!window.navigator.userAgent.match(/trident|edge/i)) {
+
+  var requests = zones.map(u => $.ajax({
+    url: `./assets/${u}.geojson`,
+    dataType: "json"
+  }));
+
+  $.when.apply($, requests).then(function(a, e, as) {
+    var americaLayer = a[0];
+    var emaLayer = e[0];
+    var asiaLayer = as[0];
+
+    layers.americas = L.geoJson(americaLayer, {
+      style: {
+        fillColor: "#EC5519",
+        weight: 0,
+        fillOpacity: 0.35
+      }
+    }).addTo(map);
+    layers.ema = L.geoJson(emaLayer, {
+      style: {
+        fillColor: "#717400",
+        weight: 0,
+        fillOpacity: 0.35
+      }
+    }).addTo(map);
+    layers.asia = L.geoJson(asiaLayer, {
+      style: {
+        fillColor: "#DC8505",
+        weight: 0,
+        fillOpacity: 0.35
+      }
+    }).addTo(map);
+  })
+}
 
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
 
@@ -178,7 +166,7 @@ var drawLine = function(location1, location2) {
   return polyline;
 };
 
-["asia", "americas", "ema"].forEach(function(region) {
+zones.forEach(function(region) {
   var group = [];
   if (!markers[region]) markers[region] = [];
 
@@ -234,6 +222,7 @@ qsa(".button").forEach(function(button) {
 
     ["asia", "americas", "ema"].forEach(function(r) {
       var layer = layers[r];
+      if (!layer) return;
       if (r == region) {
         layer.addTo(map);
       } else {
