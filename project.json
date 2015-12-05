@@ -5,8 +5,8 @@
       "path": "utopian-ireland"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/business/microsoft-taxes"
     }
   },
   "title": "",
@@ -15,7 +15,7 @@
   "slug": "",
   "tags": [],
   "image": "assets/social.jpg",
-  "production": false,
+  "production": true,
   "embedded": true,
   "sheets": ["1g91k4D2OXkuZGlC681F9NVKGRi_KNcIgwlKkKtfTJTU"]
 }

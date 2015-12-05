@@ -4,6 +4,7 @@
 
 require("component-responsive-frame/child");
 require("component-leaflet-map");
+var $ = require("jquery");
 var dot = require("./lib/dot");
 
 var template = dot.compile(require("./_infobox.html"));
@@ -19,36 +20,59 @@ L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 map.removeLayer(mapElement.lookup.tiles);
 
-var americaLayer = require("./americas.geo.json");
-var americas = L.geoJson(americaLayer, {
-  style: {
-    fillColor: "#EC5519",
-    weight: 0,
-    fillOpacity: 0.35
-  }
-}).addTo(map);
-var emaLayer = require("./ema.geo.json");
-var ema = L.geoJson(emaLayer, {
-  style: {
-    fillColor: "#717400",
-    weight: 0,
-    fillOpacity: 0.35
-  }
-}).addTo(map);
-var asiaLayer = require("./asia.geo.json");
-var asia = L.geoJson(asiaLayer, {
-  style: {
-    fillColor: "#DC8505",
-    weight: 0,
-    fillOpacity: 0.35
-  }
-}).addTo(map);
+var geoURLs = ["americas", "ema", "asia"];
+var requests = geoURLs.map(u => $.ajax({
+  url: `./assets/${u}.geojson`,
+  dataType: "json"
+}));
 
-var layers = {
-  "americas": americas,
-  "ema": ema,
-  "asia": asia
-};
+var americas;
+var ema;
+var asia;
+var layers;
+
+$.when.apply($, requests).then(function(a, e, as) {
+  var americaLayer = a[0];
+  var emaLayer = e[0];
+  var asiaLayer = as[0];
+
+  americas = L.geoJson(americaLayer, {
+    style: {
+      fillColor: "#EC5519",
+      weight: 0,
+      fillOpacity: 0.35
+    }
+  }).addTo(map);
+  ema = L.geoJson(emaLayer, {
+    style: {
+      fillColor: "#717400",
+      weight: 0,
+      fillOpacity: 0.35
+    }
+  }).addTo(map);
+    asia = L.geoJson(asiaLayer, {
+    style: {
+      fillColor: "#DC8505",
+      weight: 0,
+      fillOpacity: 0.35
+    }
+  }).addTo(map);
+
+  layers = {
+    "americas": americas,
+    "ema": ema,
+    "asia": asia
+  };
+})
+
+// var americaLayer = require("./americas.geo.json");
+
+// var emaLayer = require("./ema.geo.json");
+
+// var asiaLayer = require("./asia.geo.json");
+// var 
+
+
 
 var region;
 var index = 0;

@@ -110,11 +110,11 @@ body {
 
   .hed {
     .display-flex();
-    .align-items(center);
   }
 
   .arrow {
     font-size: 24px;
+    padding-top: 36px;
     .flex(0 0 30px);
 
     .fa {
@@ -123,6 +123,15 @@ body {
 
       &:hover {
         color: @df-middle-gray;
+      }
+
+      @media @tablet { 
+        &.left {
+          padding-left: 10px;
+        }
+        &.right {
+          padding-right: 10px;
+        }
       }
     }
 
@@ -314,4 +323,8 @@ body {
   padding-top: 10px;
   font-size: 11.5px;
   color: @df-middle-gray;
+
+  .credit-name {
+    padding-top: 2px;
+  }
 }
