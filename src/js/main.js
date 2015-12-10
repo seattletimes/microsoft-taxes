@@ -100,6 +100,11 @@ infoBox.addEventListener("click", function(e) {
     marker._icon.classList.remove("highlighted");
   });
   markers[region][index]._icon.classList.add("highlighted");
+
+  arrows[region].forEach(function(arrow) {
+    arrow._icon.classList.add("highlighted");
+  });
+  arrows[region][index]._icon.classList.add("highlighted");
 });
 
 var findMin = function(val1, val2) {
