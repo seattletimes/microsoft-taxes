@@ -102,9 +102,9 @@ infoBox.addEventListener("click", function(e) {
   markers[region][index]._icon.classList.add("highlighted");
 
   arrows[region].forEach(function(arrow) {
-    arrow._icon.classList.add("highlighted");
+    arrow._icon.classList.remove("highlighted");
   });
-  arrows[region][index]._icon.classList.add("highlighted");
+  arrows[region][(index-1)]._icon.classList.add("highlighted");
 });
 
 var findMin = function(val1, val2) {
@@ -170,10 +170,12 @@ var drawLine = function(location1, location2, region) {
       var y = lat - prevLat;
       var x = lng - prevLng;
       var rotation = Math.atan(y / x) + (Math.PI / 4);
-      if (x < 1) rotation += Math.PI;
+      if (x < 0) rotation += Math.PI;
       var arrow = L.marker(coords, {
         icon: L.divIcon({
-          html: "<div class='arrowhead' style='transform: rotateZ(-" + rotation + "rad);'></div>"
+          html: `<div 
+            class='arrowhead' 
+            style='transform: rotateZ(-${rotation}rad); -webkit-transform: rotateZ(-${rotation}rad);'></div>`
         })
       }).addTo(map);
       arrows[region].push(arrow);
