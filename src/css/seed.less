@@ -252,7 +252,12 @@ body {
   cursor: default !important;
 }
 
-.leaflet-marker-icon {
+.leaflet-div-icon {
+  background-color: transparent !important;
+  border-style: none !important;
+}
+
+.dot {
   border-radius: 50%;
   font-weight: bold;
   border: none !important;
@@ -305,6 +310,13 @@ body {
   }
 }
 
+.arrowhead {
+  border-top: 3px solid #888;
+  border-left: 3px solid #888;
+  height: 12px;
+  width: 12px;
+}
+
 .select-paragraph {
   @media @tablet {
     display: none;
@@ -328,3 +340,4 @@ body {
     padding-top: 2px;
   }
 }
+

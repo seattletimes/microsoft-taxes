@@ -31,6 +31,7 @@ var prevIndex = -1;
 var prevCoords;
 var regions = {};
 var markers = {};
+var arrows = {};
 var layers = {};
 
 //IE really doesn't handle our geoJSON very well...
@@ -130,8 +131,7 @@ var zoomMap = function() {
   map.fitBounds([southWest,northEast], {padding: [10,10]});
 };
 
-var drawLine = function(location1, location2) {
-  
+var drawLine = function(location1, location2, region) {
   var segments = 30;
 
   var pointList = [];
@@ -154,7 +154,27 @@ var drawLine = function(location1, location2) {
       var lng = x1 - (dx * i) - Math.sin(Math.PI / segments * i) * length * 5;
     }
 
-    pointList.push(new L.LatLng(lat, lng));
+    var coords = new L.LatLng(lat, lng);
+    var prevLat;
+    var prevLng;
+
+    if (i == 6) {
+      prevLat = lat;
+      prevLng = lng;
+    } else if (i == 7) {
+      var y = lat - prevLat;
+      var x = lng - prevLng;
+      var rotation = Math.atan(y / x) + (Math.PI / 4);
+      if (x < 1) rotation += Math.PI;
+      var arrow = L.marker(coords, {
+        icon: L.divIcon({
+          html: "<div class='arrowhead' style='transform: rotateZ(-" + rotation + "rad);'></div>"
+        })
+      }).addTo(map);
+      arrows[region].push(arrow);
+    }
+
+    pointList.push(coords);
   }
 
   var polyline = new L.Polyline(pointList, {
@@ -169,6 +189,7 @@ var drawLine = function(location1, location2) {
 zones.forEach(function(region) {
   var group = [];
   if (!markers[region]) markers[region] = [];
+  if (!arrows[region]) arrows[region] = [];
 
   prevCoords = null;
   
@@ -176,7 +197,7 @@ zones.forEach(function(region) {
     var coords = [location.Lat, location.Lng];
     var marker = L.marker(coords, {
       icon: L.divIcon({
-        className: region + " index-" + location.Order,
+        className: "dot " + region + " index-" + location.Order,
         html: "<div class='div-label'>" + location.Order + "</div>"
       })
     });
@@ -184,7 +205,7 @@ zones.forEach(function(region) {
     markers[region].push(marker);
 
     if (prevCoords) {
-      var line = drawLine(coords, prevCoords);
+      var line = drawLine(coords, prevCoords, region);
       group.push(line);
     }
     prevCoords = coords;
@@ -201,6 +222,17 @@ var setRegion = function() {
       map.fitBounds(regions[r].getBounds(), {padding: [10,10]});
     } else {
       map.removeLayer(regions[r])
+    }
+  }
+  for (var r in arrows) {
+    if (r == region) {
+      arrows[r].forEach(function(a) {
+        a.addTo(map);
+      });
+    } else {
+      arrows[r].forEach(function(a) {
+        map.removeLayer(a);
+      });
     }
   }
   markers[region][index]._icon.classList.add("highlighted");
